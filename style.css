@@ -1,10 +1,21 @@
+body {
+
+    background-color: #414141 !important;
+    margin-bottom: 0px !important;
+
+
+}
+
 #video {
+
     border: 1px solid #999;
     width: 98%;
     max-width: 860px;
+
 }
 
 #other-video {
+
     border: 1px solid #999;
     width: 98%;
     max-width: 860px;
@@ -16,4 +27,13 @@
     border: 1px solid black;
     padding: 0.5rem;
     overflow: scroll;
+}
+
+pre {
+    position: relative !important;
+    border: none !important;
+    width: 100% !important;
+    height: 100%;
+    color: greenyellow;
+
 }

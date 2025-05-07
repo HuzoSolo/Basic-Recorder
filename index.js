@@ -1,3 +1,5 @@
+
+
 const videoElem = document.getElementById("video");
 const logElem = document.getElementById("log");
 const startElem = document.getElementById("start");
@@ -98,26 +100,7 @@ function stopCapture() {
 }
 
 
-function downloadVideo() {
 
-    if(!recordedBlobs){
-        alert("Henüz bir kayıt bulunmuyor!");
-        return;
-    }
-    //download link generated right after capturing ended
-    const blob = new Blob(recordedBlobs, { type: 'video/webm' });
-    const url = URL.createObjectURL(blob);
-
-    console.log(url);
-
-    const downloadLink = document.createElement('a');
-    downloadLink.href = url;
-    downloadLink.download = `recording:${Date.now()}.webm`;
-    downloadLink.click();
-    // downloadArea.appendChild(downloadLink);
-
-
-}
 
 function dumpOptionsInfo() {
     const videoTrack = videoElem.srcObject.getVideoTracks()[0];
@@ -141,5 +124,32 @@ const playRecording = () => {
 
     recordedVideoEl.controls = true;
     recordedVideoEl.play();
+
+}
+
+
+
+
+function downloadVideo() {
+
+    if (!recordedBlobs) {
+        alert("Henüz bir kayıt bulunmuyor!");
+        return;
+    }
+    //download link generated right after capturing ended
+    const blob = new Blob(recordedBlobs, { type: 'video/webm' });
+    const url = URL.createObjectURL(blob);
+
+    console.log(url);
+
+    //ffmpeg converting
+
+
+    const downloadLink = document.createElement('a');
+    downloadLink.href = url;
+    downloadLink.download = `recording:${Date.now()}.webm`;
+    downloadLink.click();
+    // downloadArea.appendChild(downloadLink);
+
 
 }
