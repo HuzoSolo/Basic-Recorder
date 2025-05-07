@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huzo Recorder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <h1> 🎥 Huzo Recorder! 🎬</h1>
+    <h4>Bu uygulama stajyer huzo tarafından hayratlık olarak yapılmıştır...</h4>
+      
+      <p>
+        <button id="start">Start Capture</button>&nbsp;<button id="stop">
+          Stop Capture
+        </button>&nbsp;<button id="play">
+            play capture
+          </button>&nbsp;<button id="downloadBtn">
+            download video
+          </button>
+      </p>
+      
+      <video id="video" autoplay muted></video>
+
+        <h5>Preview Recording:</h5>
+        <video id="other-video" class="video" autoplay playsinline></video>
+
+      <br />
+
+      <div id="downloadContainer">
+    
+
+      </div>
+      <br>
+      <br>
+      <strong>Log:</strong>
+      <br />
+      <pre id="log"></pre>
+      
+
+    <script src="index.js"></script>
+</body>
+</html>
